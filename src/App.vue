@@ -1,17 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <router-view v-if="!authStore.loading" />
+  <div v-else class="min-h-screen flex items-center justify-center bg-primary-900">
+    <div class="text-primary-200">Chargement...</div>
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import { onMounted } from 'vue'
+import { useAuthStore } from '@/stores/auth'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+const authStore = useAuthStore()
+
+onMounted(() => {
+  authStore.initialize()
+})
 </script>
 
 <style>
@@ -19,8 +21,17 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a0a0a; /* Correspond à bg-primary-950 */
+  min-height: 100vh;
 }
 </style>
