@@ -13,15 +13,11 @@
     "@supabase/supabase-js": "^2.49.4",
     "@vueuse/core": "^13.1.0",
     "@vueuse/motion": "^3.0.3",
-    "autoprefixer": "^9",
     "chart.js": "^4.4.1",
     "core-js": "^3.8.3",
     "crypto-js": "^4.2.0",
     "date-fns": "^4.1.0",
     "pinia": "^3.0.2",
-    "postcss": "^7",
-    "tailwindcss": "^4.1.4",
-    "tippy.js": "^6.3.7",
     "vue": "^3.2.13",
     "vue-router": "4"
   },
@@ -32,8 +28,11 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "autoprefixer": "^9",
     "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3"
+    "eslint-plugin-vue": "^8.0.3",
+    "postcss": "^7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "eslintConfig": {
     "root": true,
