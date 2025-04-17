@@ -32,6 +32,12 @@ const routes = [
     name: 'links',
     component: () => import('@/views/LinksView.vue'),
     meta: { requiresAuth: true }
+  },
+  {
+    path: '/kanban',
+    name: 'kanban',
+    component: () => import('@/views/KanbanView.vue'),
+    meta: { requiresAuth: true }
   }
 ]
 
