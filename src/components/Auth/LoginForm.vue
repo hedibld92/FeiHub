@@ -3,7 +3,7 @@
     <div class="max-w-md w-full space-y-8 p-8 bg-primary-800 rounded-lg shadow-xl">
       <div>
         <h2 class="mt-6 text-center text-3xl font-extrabold text-primary-200">
-          Fei.Hub v1.0.2
+          Fei.Hub v1.0.3
         </h2>
         <p class="mt-2 text-center text-sm text-primary-400">
           Votre espace personnel
