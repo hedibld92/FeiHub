@@ -283,7 +283,8 @@ import {
   HomeIcon,
   FolderIcon,
   DocumentTextIcon,
-  LinkIcon
+  LinkIcon,
+  ViewColumnsIcon
 } from '@heroicons/vue/24/outline'
 import StatsOverview from '@/components/StatsOverview.vue'
 
@@ -301,6 +302,7 @@ const menuItems = [
   { name: 'Fichiers', path: '/files', icon: FolderIcon },
   { name: 'Notes', path: '/notes', icon: DocumentTextIcon },
   { name: 'Liens', path: '/links', icon: LinkIcon },
+  { name: 'Kanban', path: '/kanban', icon: ViewColumnsIcon },
 ]
 
 // Files

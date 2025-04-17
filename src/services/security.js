@@ -10,28 +10,11 @@ export class SecurityService {
     // Initialisation du service de chiffrement
     await EncryptionService.initialize()
     
-    // Configuration des headers de sécurité
-    this.setSecurityHeaders()
-    
     // Mise en place du renouvellement automatique de session
     this.setupSessionRenewal()
     
     // Protection contre les attaques XSS et injections
     this.setupXSSProtection()
-  }
-
-  static setSecurityHeaders() {
-    // Application des headers de sécurité
-    Object.entries(securityConfig.headers).forEach(([key, value]) => {
-      if (typeof window !== 'undefined') {
-        document.head.appendChild(
-          Object.assign(document.createElement('meta'), {
-            httpEquiv: key,
-            content: value
-          })
-        )
-      }
-    })
   }
 
   static setupSessionRenewal() {
