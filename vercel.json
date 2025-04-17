@@ -2,10 +2,10 @@
   "version": 2,
   "builds": [
     {
-      "src": "vercel-build.sh",
+      "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "feihub/dist"
+        "distDir": "dist"
       }
     }
   ],
